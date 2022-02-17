@@ -5,7 +5,7 @@ export default [
   },
   {
     path: 'clients',
-    label: 'Clients',
+    label: 'Clientes',
   },
   {
     path: 'feature',
