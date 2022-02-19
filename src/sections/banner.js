@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Box, Container, Heading, Text, Button } from 'theme-ui';
+import { jsx, Box, Container, Heading, Text, Button, Input } from 'theme-ui';
 import { rgba } from 'polished';
 
 import Select from 'components/select';
@@ -49,19 +49,7 @@ export default function Banner() {
               work.
             </Text>
             <Box as="form" onSubmit={handleSubmit}>
-              <Select
-                id="location"
-                label="Find workplace"
-                defaultValue={options[1].label}
-                sx={styles.select}
-                icon={mapMarker}
-              >
-                {options?.map((option) => (
-                  <option value={option.value} key={option.id}>
-                    {option.label}
-                  </option>
-                ))}
-              </Select>
+              <Input placeholder="Enter your email" style={{color: "#000", borderColor: "#000"}} />
               <Button type="submit" sx={styles.button} variant="primary">
                 Subscribe
               </Button>

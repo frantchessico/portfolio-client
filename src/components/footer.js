@@ -40,7 +40,7 @@ export default function Footer() {
           <Flex sx={styles.copyright}>
             <Logo white />
             <Text as="span">
-              All right reserved - Design &amp; Developed by RedQ, Inc
+              All right reserved - Design &amp; Francisco Inoque
             </Text>
           </Flex>
 
