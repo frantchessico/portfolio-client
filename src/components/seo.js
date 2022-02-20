@@ -2,10 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 
 export default function SEO({
-  description = 'startup landing descriptions',
-  author = 'RedQ, Inc',
+  description = 'Olá, sou Francisco Jaime Inoque. Sou Full Stack Developer, especialista em Desenvolvimento Back-End com Node.js. No Front-End trabalho com Angular, React.js e Next.js. Busco crescer na minha carreira como desenvolvedor atuando em uma área focada em inovar, podendo com minha ajuda construir aplicações escaláveis ​​e de alto desempenho.',
+  author = 'Francisco Inoque',
   meta,
-  title = 'startup landing title',
+  title = 'Francisco Inoque',
 }) {
   const metaData = [
     {
