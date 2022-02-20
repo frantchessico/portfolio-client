@@ -41,12 +41,13 @@ export default function Banner() {
         <Box sx={styles.contentWrapper}>
           <Box sx={styles.bannerContent}>
             <Heading as="h1" sx={styles.heroTitle}>
-              Coworking space that will feel like home.
+            Hi, I'm Francisco Jaime Inoque.
             </Heading>
             <Text as="p" sx={styles.desc}>
-              Whether you’re an established enterprise or a growing startup,
-              discover spaces that inspire which will best your most impactful
-              work.
+            I'm Full Stack Developer, specialist in Back-End Development with Node.js. In Front-End I work with Angular, React.js and Next.js.
+            <br/>
+
+            <strong>Get awesome full stack programming tips.</strong>
             </Text>
             <Box as="form" onSubmit={handleSubmit}>
               <Input placeholder="Enter your email" style={{color: "#000", borderColor: "#000"}} />

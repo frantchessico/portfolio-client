@@ -3,37 +3,80 @@ import { jsx, Box, Button, Container, Image } from 'theme-ui';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import Slider from 'react-slick';
 import SectionHeading from 'components/section-heading';
-import uber from 'assets/images/clients/uber.png';
-import google from 'assets/images/clients/google.png';
-import paypal from 'assets/images/clients/paypal.png';
-import microsoft from 'assets/images/clients/microsoft.png';
-import dribbble from 'assets/images/clients/dribbble.png';
+import nodejs from 'assets/images/clients/nodejs.png';
+import javascript from 'assets/images/clients/javascript.png';
+import angular from 'assets/images/clients/angular.png';
+import graphql from 'assets/images/clients/graphql.png';
+import mongodb from 'assets/images/clients/mongodb.png';
+import reactjs from 'assets/images/clients/reactjs.png';
 const clients = [
   {
     id: 1,
-    name: 'uber',
-    logo: uber,
+    name: 'javascript',
+    logo: javascript,
   },
+
+  {
+    id: 1,
+    name: 'nodejs',
+    logo: nodejs,
+  },
+
   {
     id: 2,
-    name: 'Google',
-    logo: google,
-  },
-  {
-    id: 3,
-    name: 'PayPal',
-    logo: paypal,
-  },
-  {
-    id: 4,
-    name: 'Microsoft',
-    logo: microsoft,
+    name: 'angular',
+    logo: angular,
   },
   {
     id: 5,
-    name: 'Dribbble',
-    logo: dribbble,
+    name: 'reactjs',
+    logo: reactjs,
   },
+  {
+    id: 3,
+    name: 'graphql',
+    logo: graphql,
+  },
+  {
+    id: 4,
+    name: 'mongodb',
+    logo: mongodb,
+  },
+
+
+  {
+    id: 1,
+    name: 'javascript',
+    logo: javascript,
+  },
+
+  {
+    id: 1,
+    name: 'nodejs',
+    logo: nodejs,
+  },
+
+  {
+    id: 2,
+    name: 'angular',
+    logo: angular,
+  },
+  {
+    id: 5,
+    name: 'reactjs',
+    logo: reactjs,
+  },
+  {
+    id: 3,
+    name: 'graphql',
+    logo: graphql,
+  },
+  {
+    id: 4,
+    name: 'mongodb',
+    logo: mongodb,
+  },
+  
 ];
 
 function SlickArrow({ className, onClick, control }) {
@@ -97,7 +140,7 @@ const Clients = () => {
       <Container>
         <SectionHeading
           slogan="Meet Our Clients"
-          title="This guys are using our service and they're more than happier ever."
+          title="The technologies I use daily in programming"
         />
         <Slider sx={styles.clients} {...settings}>
           {clients?.map((client) => (
