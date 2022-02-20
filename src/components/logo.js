@@ -12,7 +12,7 @@ export default function Logo({ white }) {
         variant: 'links.logo',
       }}
     >
-      {white ? <h2 style={{color: '#fff', fontWeight: 'bold', fontFamily: 'monospace'}}>Francisco Inoque</h2> : <h2 style={{margin: 0, color: '#000', fontWeight: 'bold', fontFamily: 'monospace'}}>Francisco Inoque</h2>} 
+      {white ? <h2 style={{color: '#fff', fontWeight: 'bold', fontFamily: 'monospace'}}>FJ. </h2> : <h2 style={{margin: 0, color: '#000', fontWeight: 'bold', fontFamily: 'monospace'}}>Francisco Inoque</h2>} 
     </Link>
   );
 }
