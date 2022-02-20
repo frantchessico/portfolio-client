@@ -12,7 +12,7 @@ export default function Logo({ white }) {
         variant: 'links.logo',
       }}
     >
-      <Image src={white ? logoWhite : logo} alt="startup landing logo" />
+      <h1 style={{color: "#000", fontWeight: "bold", fontFamily: "monospace"}}>Francisco Inoque</h1>
     </Link>
   );
 }
