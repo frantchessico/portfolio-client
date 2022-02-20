@@ -18,7 +18,7 @@ export default function IndexPage() {
       <Layout>
         <SEO title="Francisco Inoque" />
         <Banner />
-        <Clients />
+        {/* <Clients /> */}
         <FeaturedSpace />
         <Gallery />
         <Pricing />

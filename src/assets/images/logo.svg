@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="182" height="37" viewBox="0 0 182 37">
+  <defs>
+    <clipPath id="clip-logo">
+      <rect width="182" height="37"/>
+    </clipPath>
+  </defs>
+  <g id="logo" clip-path="url(#clip-logo)">
+    <text id="Francisco_Inoque" data-name="Francisco Inoque" transform="translate(91 25)" font-size="24" font-family="ScriptMTBold, Script MT"><tspan x="-83.543" y="0">Francisco Inoque</tspan></text>
+  </g>
+</svg>

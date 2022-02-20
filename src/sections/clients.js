@@ -3,12 +3,12 @@ import { jsx, Box, Button, Container, Image } from 'theme-ui';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import Slider from 'react-slick';
 import SectionHeading from 'components/section-heading';
-import nodejs from 'assets/images/clients/nodejs.png';
-import javascript from 'assets/images/clients/javascript.png';
-import angular from 'assets/images/clients/angular.png';
-import graphql from 'assets/images/clients/graphql.png';
-import mongodb from 'assets/images/clients/mongodb.png';
-import reactjs from 'assets/images/clients/reactjs.png';
+import nodejs from 'assets/images/clients/angular.svg';
+import javascript from 'assets/images/clients/angular.svg';
+import angular from 'assets/images/clients/angular.svg';
+import graphql from 'assets/images/clients/angular.svg';
+import mongodb from 'assets/images/clients/angular.svg';
+import reactjs from 'assets/images/clients/angular.svg';
 const clients = [
   {
     id: 1,
@@ -44,38 +44,7 @@ const clients = [
   },
 
 
-  {
-    id: 1,
-    name: 'javascript',
-    logo: javascript,
-  },
-
-  {
-    id: 1,
-    name: 'nodejs',
-    logo: nodejs,
-  },
-
-  {
-    id: 2,
-    name: 'angular',
-    logo: angular,
-  },
-  {
-    id: 5,
-    name: 'reactjs',
-    logo: reactjs,
-  },
-  {
-    id: 3,
-    name: 'graphql',
-    logo: graphql,
-  },
-  {
-    id: 4,
-    name: 'mongodb',
-    logo: mongodb,
-  },
+  
   
 ];
 
