@@ -105,7 +105,7 @@ const Clients = () => {
   };
 
   return (
-    <Box id="clients" as="section" sx={styles.section}>
+    <Box id="tech-and-tools" as="section" sx={styles.section}>
       <Container>
         <SectionHeading
           slogan="Meet Our Clients"

@@ -156,7 +156,7 @@ const Pricing = () => {
   };
 
   return (
-    <Box id="pricing" as="section" sx={styles.section}>
+    <Box id="skills" as="section" sx={styles.section}>
       <Container>
         <SectionHeading
           sx={styles.heading}
