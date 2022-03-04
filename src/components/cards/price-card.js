@@ -12,11 +12,7 @@ const PriceCard = ({ price }) => {
       className={`priceCard ${price?.isRecommended ? ' recommended' : ''}`}
     >
       <Box sx={styles.priceDetails}>
-        {price?.isRecommended && (
-          <Text as="span" sx={styles.recommended}>
-            Recommended
-          </Text>
-        )}
+       
         <Box as="header" className="priceHeader" sx={styles.header}>
           <Image loading="lazy" src={price?.icon} alt="icon" />
           <Heading as="h3">{price.title}</Heading>
@@ -38,7 +34,7 @@ const PriceCard = ({ price }) => {
           ))}
         </Box>
       </Box>
-      <Box as="footer" className="priceAmount" sx={styles.footer}>
+      {/* <Box as="footer" className="priceAmount" sx={styles.footer}>
         <Box>
           <Text as="span" className="price-label">
             Starting from
@@ -52,7 +48,7 @@ const PriceCard = ({ price }) => {
           size="38px"
           color={price?.isRecommended ? '#636879' : ''}
         />
-      </Box>
+      </Box> */}
     </Box>
   );
 };

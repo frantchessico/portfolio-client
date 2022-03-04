@@ -31,10 +31,10 @@ export default [
     path: 'home',
     label: 'Home',
   },
-  {
-    path: 'tech-and-tools',
-    label: 'Techs & Tools',
-  },
+  // {
+  //   path: 'tech-and-tools',
+  //   label: 'Techs & Tools',
+  // },
   {
     path: 'feature',
     label: 'Feature',

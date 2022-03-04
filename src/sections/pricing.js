@@ -19,7 +19,7 @@ const monthlyPricing = [
   {
     id: 1,
     icon: frontend,
-    title: 'Starter Pack',
+    title: 'Front End',
     amount: 49.99,
     isRecommended: false,
     features: [
@@ -48,29 +48,29 @@ const monthlyPricing = [
   {
     id: 2,
     icon: frontendBlack,
-    title: 'Family Pack',
+    title: 'Front End',
     amount: 89.99,
     isRecommended: true,
     features: [
       {
         id: 1,
         isAvailable: true,
-        title: 'Ultimate access to all course, exercises and assessments',
+        title: 'Angular Material',
       },
       {
         id: 2,
         isAvailable: true,
-        title: `Free access for all kind of exercise corrections with downloads.`,
+        title: `MUI(React Material UI)`,
       },
       {
         id: 3,
         isAvailable: true,
-        title: `Total assessment corrections with free download access system`,
+        title: `CSS Tailwind`,
       },
       {
         id: 4,
         isAvailable: true,
-        title: `Unlimited download of courses on the mobile app contents`,
+        title: `Sass`,
       },
     ],
   },
