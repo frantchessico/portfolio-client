@@ -9,11 +9,16 @@ import { keyframes } from '@emotion/core';
 
 import userIcon from 'assets/images/icons/two-users.png';
 import userIcon2 from 'assets/images/icons/three-users.png';
+import database from 'assets/images/icons/databases.png';
+import server from 'assets/images/icons/server.png';
+import frontend from 'assets/images/icons/frontend.png';
+import frontendBlack from 'assets/images/icons/frontend-black.png';
+import css from 'assets/images/icons/css.png';
 
 const monthlyPricing = [
   {
     id: 1,
-    icon: userIcon,
+    icon: frontend,
     title: 'Starter Pack',
     amount: 49.99,
     isRecommended: false,
@@ -21,28 +26,28 @@ const monthlyPricing = [
       {
         id: 1,
         isAvailable: true,
-        title: 'Ultimate access to all course, exercises and assessments',
+        title: 'Angular',
       },
       {
         id: 2,
         isAvailable: true,
-        title: `Free access for all kind of exercise corrections with downloads.`,
+        title: `Reactjs`,
       },
       {
         id: 3,
         isAvailable: true,
-        title: `Total assessment corrections with free download access system`,
+        title: `React Native`,
       },
       {
         id: 4,
-        isAvailable: false,
-        title: `Unlimited download of courses on the mobile app contents`,
+        isAvailable: true,
+        title: `Graphql`,
       },
     ],
   },
   {
     id: 2,
-    icon: userIcon2,
+    icon: frontendBlack,
     title: 'Family Pack',
     amount: 89.99,
     isRecommended: true,
@@ -74,59 +79,59 @@ const monthlyPricing = [
 const annualPricing = [
   {
     id: 1,
-    icon: userIcon,
-    title: 'Starter Pack',
+    icon: server,
+    title: 'Server',
     amount: 49.99 * 12 - 10,
     isRecommended: false,
     features: [
       {
         id: 2,
         isAvailable: true,
-        title: `Free access for all kind of exercise corrections with downloads.`,
+        title: `Node JS`,
       },
       {
         id: 1,
         isAvailable: true,
-        title: 'Ultimate access to all course, exercises and assessments',
+        title: 'Nest.js',
       },
       {
         id: 3,
         isAvailable: true,
-        title: `Total assessment corrections with free download access system`,
+        title: `Django`,
       },
       {
         id: 4,
-        isAvailable: false,
-        title: `Unlimited download of courses on the mobile app contents`,
+        isAvailable: true,
+        title: `GoLang`,
       },
     ],
   },
   {
     id: 2,
-    icon: userIcon2,
-    title: 'Family Pack',
+    icon: database,
+    title: 'Databases',
     amount: 89.99 * 12 - 10,
     isRecommended: true,
     features: [
       {
         id: 4,
         isAvailable: true,
-        title: `Unlimited download of courses on the mobile app contents`,
+        title: `MongoDB`,
       },
       {
         id: 2,
         isAvailable: true,
-        title: `Free access for all kind of exercise corrections with downloads.`,
+        title: `MySQL`,
       },
       {
         id: 1,
         isAvailable: true,
-        title: 'Ultimate access to all course, exercises and assessments',
+        title: 'FaunaDB',
       },
       {
         id: 3,
         isAvailable: true,
-        title: `Total assessment corrections with free download access system`,
+        title: `Firebase(Realtime Databases)`,
       },
     ],
   },
@@ -160,8 +165,8 @@ const Pricing = () => {
       <Container>
         <SectionHeading
           sx={styles.heading}
-          slogan="Pricing plan"
-          title="What deal suit you perfect"
+          slogan="Tech Stack"
+          title="Minha pilha de tecnologias"
         />
         <Flex sx={styles.priceSwitcher}>
           <Button
@@ -169,14 +174,14 @@ const Pricing = () => {
             className={plan?.active === 'monthly' ? 'active' : ''}
             onClick={() => handlePlan('monthly')}
           >
-            Monthly Plan
+            Front End
           </Button>
           <Button
             variant="text"
             className={plan?.active === 'yearly' ? 'active' : ''}
             onClick={() => handlePlan('yearly')}
           >
-            Annual Plan
+            Back End
           </Button>
         </Flex>
         <Grid sx={styles.grid}>
