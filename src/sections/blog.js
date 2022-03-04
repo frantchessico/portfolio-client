@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import { useEffect, useState } from 'react';
 import { jsx, Box, Container, Button } from 'theme-ui';
 import Slider from 'react-slick';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
@@ -8,6 +9,7 @@ import BlogPost from 'components/cards/blog-card';
 import thumb1 from 'assets/images/blog/1.png';
 import thumb2 from 'assets/images/blog/2.png';
 import thumb3 from 'assets/images/blog/3.png';
+import { getBlogs } from '../service/blog.service'
 
 const data = [
   {
@@ -29,11 +31,12 @@ const data = [
     thumb: thumb3,
     commentCount: 18,
     link: '#!',
-    title: `Convert your web layout theming easily with sketch zeplin extension`,
+    title: `JavaScript Array find() Method`,
   },
 ];
 
 function SlickArrow({ className, onClick, control }) {
+  
   return (
     <Button
       variant="text"
@@ -77,6 +80,23 @@ const settings = {
 };
 
 const Blog = () => {
+  const [posts, setPosts] = useState([]);
+  const [title, setTitle] = useState('');
+  const [image, setImage] = useState('');
+  const [comments, setComments] = useState('');
+  const [reaction, setReaction] = useState('');
+
+  useEffect(() => {
+   getBlogs()
+   .then(posts => {
+     const post = posts.data;
+     console.log(post)
+    return setPosts(post)
+   }).catch(error => {
+     console.log(error)
+   })
+  }, [''])
+
   return (
     <Box id="blog" as="section" sx={styles.section}>
       <Container>
@@ -86,7 +106,7 @@ const Blog = () => {
           title="Popular blog post we update everyday"
         />
         <Slider sx={styles.blogWrapper} {...settings}>
-          {data?.map((post) => (
+          {posts?.map((post) => (
             <BlogPost key={post.id} post={post} />
           ))}
         </Slider>

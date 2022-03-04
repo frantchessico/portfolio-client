@@ -8,16 +8,24 @@ const BlogPost = ({ post }) => {
   return (
     <Box sx={styles.post}>
       <Flex as="figure" sx={styles.postImage}>
-        <Image loading="lazy" src={post?.thumb} alt={post?.title} />
+        <Image loading="lazy" src={post?.cover_image} alt={post?.title} />
+        
       </Flex>
+      <Text as="span" sx={styles.commentCount}>
+          
+          {new Date(post?.created_at).toDateString()}
+        </Text>
       <Box sx={styles.meta}>
         <Heading as="h4">
-          <Link path={post.link}>{post?.title}</Link>
+          <a target="_blank" href={post.url}>{post?.                                                                             title}</a>
         </Heading>
         <Text as="span" sx={styles.commentCount}>
           <Image loading="lazy" src={chat} alt="chat icon" />
-          {post?.commentCount} Comments
+          
+          {post?.positive_reactions_count} Reactions
         </Text>
+
+        
       </Box>
     </Box>
   );
