@@ -7,28 +7,28 @@ import { rgba } from 'polished';
 const navItems = [
   {
     id: 1,
-    link: '#!',
-    title: 'Home',
+    link: 'https://www.instagram.com/frantchessico/',
+    title: 'Instagram',
   },
   {
     id: 2,
-    link: '#!',
-    title: 'Advertise',
+    link: 'https://twitter.com/Franciscolnoque',
+    title: 'Twitter',
   },
   {
     id: 3,
-    link: '#!',
-    title: 'Supports',
+    link: 'https://github.com/frantchessico',
+    title: 'GitHub',
   },
   {
     id: 4,
-    link: '#!',
-    title: 'Marketing',
+    link: 'https://www.linkedin.com/in/francisco-inoque-24a76112b/',
+    title: 'LinkedIn',
   },
   {
     id: 5,
-    link: '#!',
-    title: 'FAQ',
+    link: 'https://dev.to/frantchessico',
+    title: 'DevTo',
   },
 ];
 
@@ -47,7 +47,7 @@ export default function Footer() {
           <Flex as="ul" sx={styles.nav}>
             {navItems?.map((item) => (
               <li key={item.id}>
-                <Link path={item.link}>{item.title}</Link>
+                <a target="_blank" href={item.link}>{item.title}</a>
               </li>
             ))}
           </Flex>

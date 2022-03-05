@@ -36,8 +36,8 @@ export default [
   //   label: 'Techs & Tools',
   // },
   {
-    path: 'feature',
-    label: 'Feature',
+    path: 'e-books',
+    label: 'E-Books',
   },
   {
     path: 'projects',

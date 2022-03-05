@@ -44,7 +44,7 @@ const data = {
     {
       id: 1,
       image: slider1,
-      title: 'Kin Co-working Space',
+      title: 'JavaScript',
       desc: '442 Broadway, New York',
     },
     {
@@ -103,13 +103,13 @@ const FeaturedSpace = () => {
   };
 
   return (
-    <Box id="feature" as="section" sx={styles.section}>
+    <Box id="e-books" as="section" sx={styles.section}>
       <Container>
         <Box sx={styles.contentWrapper}>
           <Box sx={styles.leftContent}>
             <SectionHeading
               sx={styles.heading}
-              title="Some good place to where can build your startup business"
+              title="Some books to get you started with smart and clean coding in your career"
               description="Co-working offers beautifully crafted workspaces where people can create, connect, and grow their businesses at prime locations in multiple cities."
             />
             <Box sx={styles.featureWrapper}>

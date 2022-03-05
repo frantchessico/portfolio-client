@@ -1,15 +1,31 @@
-/** @jsx jsx */
 import { jsx, Box, Container, MenuButton, Flex, Button } from 'theme-ui';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { GrClose } from 'react-icons/gr';
 import Sticky from 'react-stickynode';
 import Logo from 'components/logo';
 import { NavLink } from 'components/link';
 import menuItems from './header.data';
+import { loginUser } from '../../service/auth.service';
+import { auth } from '../../configs/firebase'
+
 
 export default function Header() {
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [isLogged, setIsLogged] = useState(false);
 
+   const handlerLogin = () => {
+     loginUser().then(snapshot => {
+       
+       const user = snapshot.user;
+       console.log(user.displayName)
+     }).catch(error => console.log(error))
+   }
+
+   useEffect(() => {
+    const au = auth.currentUser
+    console.log(au)
+     
+   }, [''])
   const toggleMobileMenu = () => {
     setMobileMenu(!mobileMenu);
   };
@@ -54,8 +70,8 @@ export default function Header() {
                     </li>
                   ))}
                 </Box>
-                <Button sx={styles.joinNow} variant="primaryMd">
-                  Join us now
+                <Button onClick={handlerLogin} sx={styles.joinNow} variant="primaryMd">
+                Get E-Books
                 </Button>
               </Flex>
 

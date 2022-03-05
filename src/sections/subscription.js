@@ -14,7 +14,7 @@ const Subscription = () => {
         <Box sx={styles.content}>
           <SectionHeading
             sx={styles.heading}
-            title="Subscribe to get best offers."
+            title="Get news about code."
             description="By subscribing with your mail, you will agree with terms"
           />
           <Flex as="form" sx={styles.form} onSubmit={handleSubmit}>
@@ -22,7 +22,7 @@ const Subscription = () => {
               Email
             </Box>
             <Input type="email" id="email" placeholder="Enter your email" />
-            <Button variant="white">Subscribe us</Button>
+            <Button variant="white">Subscribe now</Button>
           </Flex>
         </Box>
       </Container>
