@@ -6,7 +6,9 @@ import Logo from 'components/logo';
 import { NavLink } from 'components/link';
 import menuItems from './header.data';
 import { loginUser } from '../../service/auth.service';
-import { auth } from '../../configs/firebase'
+import { auth } from '../../configs/firebase';
+import { GoAlert } from "react-icons/go";
+import { FaGithub } from "react-icons/fa";
 
 
 export default function Header() {
@@ -15,7 +17,7 @@ export default function Header() {
 
    const handlerLogin = () => {
      loginUser().then(snapshot => {
-       
+
        const user = snapshot.user;
        console.log(user.displayName)
      }).catch(error => console.log(error))
@@ -23,7 +25,9 @@ export default function Header() {
 
    useEffect(() => {
     const au = auth.currentUser
-    console.log(au)
+    if(au) {
+      console.log(au.email)
+    }
      
    }, [''])
   const toggleMobileMenu = () => {
@@ -37,6 +41,11 @@ export default function Header() {
   const closeMobileMenu = () => {
     setMobileMenu(false);
   };
+
+  const redirect = () => {
+    window.open("https://github.com/frantchessico", "_blank")
+    return null;
+  }
 
   return (
     <Box sx={styles.headerWrapper}>
@@ -70,8 +79,9 @@ export default function Header() {
                     </li>
                   ))}
                 </Box>
-                <Button onClick={handlerLogin} sx={styles.joinNow} variant="primaryMd">
-                Get E-Books
+                <Button style={{backgroundColor: "#000"}} onClick={redirect} sx={styles.joinNow} variant="primaryMd">
+               
+                <FaGithub/>
                 </Button>
               </Flex>
 
@@ -79,6 +89,8 @@ export default function Header() {
                 <Button variant="text" sx={styles.closeButton}>
                   <GrClose onClick={closeMobileMenu} size="20px" />
                 </Button>
+
+                
               ) : (
                 <MenuButton
                   aria-label="Toggle Menu"

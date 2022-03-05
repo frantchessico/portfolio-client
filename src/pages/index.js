@@ -19,7 +19,7 @@ export default function IndexPage() {
         <SEO title="Francisco Inoque" />
         <Banner />
         {/* <Clients /> */}
-        <FeaturedSpace />
+        {/* <FeaturedSpace /> */}
         <Gallery />
         <Pricing />
         <OurCustomer />

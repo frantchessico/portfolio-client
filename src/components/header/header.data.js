@@ -35,10 +35,10 @@ export default [
   //   path: 'tech-and-tools',
   //   label: 'Techs & Tools',
   // },
-  {
-    path: 'e-books',
-    label: 'E-Books',
-  },
+  // {
+  //   path: 'e-books',
+  //   label: 'E-Books',
+  // },
   {
     path: 'projects',
     label: 'Projects',

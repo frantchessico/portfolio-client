@@ -50,22 +50,25 @@ const masonryOptions = {
 };
 
 const Gallery = () => {
+  const explore = () => {
+    
+  }
   return (
     <Box id="projects" as="section" sx={styles.section}>
       <Container sx={styles.container}>
         <SectionHeading
           sx={styles.heading}
           slogan="Working space"
-          title="Let’s meet our interior room decoration"
+          title="My Most Popular Website Clones and Projects"
         />
         <Box as={Masonry} options={masonryOptions} sx={styles.galleryWrapper}>
           {data?.map((item) => (
             <GalleryCard key={item.id} item={item} />
           ))}
         </Box>
-        <Button variant="muted" sx={styles.button}>
+        {/* <Button variant="muted" sx={styles.button}>
           Explore More <RiArrowRightSLine size="20px" />
-        </Button>
+        </Button> */}
       </Container>
     </Box>
   );
