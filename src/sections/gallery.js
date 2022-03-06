@@ -17,31 +17,38 @@ const data = [
     id: 1,
     image: gallery1,
     title: 'Front working space',
+    link: "https://savanapoint.org/"
   },
   {
     id: 2,
     image: gallery2,
-    title: 'Meeting corner',
+    title: 'MasterWinner',
+    link: "https://masterwinner.live/"
   },
   {
     id: 3,
     image: gallery3,
-    title: 'Guest meeting room',
+    title: 'Disnep Plus Clone',
+    link: "https://franciscoinoque-disnep-clone.firebaseapp.com/"
   },
+  
   {
     id: 4,
     image: gallery4,
-    title: 'Guest rest room',
+    title: 'Pinterest Clone',
+    link: "https://savanapoint.org/"
   },
   {
     id: 6,
     image: gallery6,
-    title: 'Kitchen room',
+    title: 'SavanaPoint',
+    link: "https://savanapoint.org/"
   },
   {
     id: 5,
     image: gallery5,
-    title: 'Single working space',
+    title: 'Airbnb Clone',
+    link: "https://savanapoint.org/"
   },
 ];
 
@@ -50,8 +57,10 @@ const masonryOptions = {
 };
 
 const Gallery = () => {
-  const explore = () => {
-    
+  const lauchDemo = (link) => {
+    console.log('LINK')
+    // window.open(link, "_blank")
+    // return null;
   }
   return (
     <Box id="projects" as="section" sx={styles.section}>
@@ -63,7 +72,10 @@ const Gallery = () => {
         />
         <Box as={Masonry} options={masonryOptions} sx={styles.galleryWrapper}>
           {data?.map((item) => (
-            <GalleryCard key={item.id} item={item} />
+            
+              <GalleryCard  key={item.id} item={item} />
+             
+
           ))}
         </Box>
         {/* <Button variant="muted" sx={styles.button}>
