@@ -48,7 +48,7 @@ const data = [
     id: 5,
     image: gallery5,
     title: 'Airbnb Clone',
-    link: "https://savanapoint.org/"
+    link: "https://franciscoinoque-airbnb-clone.firebaseapp.com/"
   },
 ];
 
