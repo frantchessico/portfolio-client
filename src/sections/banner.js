@@ -1,10 +1,13 @@
 /** @jsx jsx */
 import { jsx, Box, Container, Heading, Text, Button, Input } from 'theme-ui';
+import { useState, useEffect } from 'react';
 import { rgba } from 'polished';
 
 import Select from 'components/select';
 import bannerBg from 'assets/images/banner-bg.jpg';
 import mapMarker from 'assets/images/icons/map-marker.png';
+import { getMyCV } from 'service/form.service';
+import { toast } from 'react-toastify';
 
 const options = [
   {
@@ -30,9 +33,45 @@ const options = [
 ];
 
 export default function Banner() {
-  const handleSubmit = (e) => {
+  const [loader, setLoader] = useState(false);
+
+  const handleSubmit = async (e) => {
+    setLoader(true)
     e.preventDefault();
-    console.log('submitting...');
+    
+   
+   const email = e.target.email.value;
+   const data = {
+     email
+   };
+   await e.target.reset();
+
+    
+
+   try {
+    const snap = await  getMyCV(data);
+     
+     
+
+
+     if(snap.data.errors) {
+      setLoader(false);
+      
+      return   toast.error('Sorry, sommething went wrong, please try again.')
+     }
+
+     else {
+      setLoader(false);
+      
+     
+      return toast.success(`Thanks. Please receive my cv in your email.
+       `);
+     }
+
+   } catch (error) {
+    return   toast.error('Sorry, sommething went wrong, please try again.')
+   }
+  
   };
 
   return (
@@ -50,9 +89,9 @@ export default function Banner() {
             <strong>Get awesome full stack programming tips.</strong>
             </Text>
             <Box as="form" onSubmit={handleSubmit}>
-              <Input placeholder="Enter your email" style={{color: "#000", borderColor: "#000"}} />
+              <Input name="email" placeholder="Enter your email" style={{color: "#000", borderColor: "#000"}} />
               <Button type="submit" sx={styles.button} variant="primary">
-                Subscribe
+                {loader? "Please Wait...": "Subscribe"}
               </Button>
             </Box>
           </Box>

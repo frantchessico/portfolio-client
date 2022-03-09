@@ -11,6 +11,8 @@ import Gallery from 'sections/gallery';
 import Pricing from 'sections/pricing';
 import Blog from 'sections/blog';
 import Subscription from 'sections/subscription';
+import { ToastContainer } from 'react-toastify';
+
 
 export default function IndexPage() {
   return (
@@ -26,6 +28,7 @@ export default function IndexPage() {
         <Blog />
         <Subscription />
       </Layout>
+      <ToastContainer />
     </ThemeProvider>
   );
 }
