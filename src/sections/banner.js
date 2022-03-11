@@ -91,12 +91,12 @@ export default function Banner() {
             I'm Full Stack Developer, specialist in Back-End Development with Node.js. In Front-End I work with Angular, React.js and Next.js.
             <br/>
 
-            <strong>Get awesome full stack programming tips.</strong>
+            <strong>Enter your email and get my CV.</strong>
             </Text>
             <Box as="form" onSubmit={handleSubmit}>
               <Input name="email" placeholder="Enter your email" style={{color: "#000", borderColor: "#000"}} />
               <Button type="submit" sx={styles.button} variant="primary">
-                {loader? "Please Wait...": "Subscribe"}
+                {loader? "Please Wait...": "Get My CV Now"}
               </Button>
             </Box>
           </Box>

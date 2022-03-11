@@ -15,13 +15,13 @@ const OurCustomer = () => {
           <Box sx={styles.rightContent}>
             <SectionHeading
               sx={styles.heading}
-              title="We have more than thousand of worldwide happy customer."
-              description="Co-working offers beautifully crafted workspaces where people can create, connect, and grow their businesses at prime locations in multiple cities."
+              title="The technologies that save my days."
+              description="Throughout my career as a software developer, I had the great privilege and pleasure of knowing and using various technologies. And I love every detail I learned and learn because it makes me who I am today."
             />
             <Box sx={{ textAlign: ['center', 'center', 'center', 'left'] }}>
-              <Link variant="links.learnMore" sx={styles.link} href="#!">
+              {/* <Link variant="links.learnMore" sx={styles.link} href="#!">
                 Learn more <RiArrowRightSLine size="20px" />
-              </Link>
+              </Link> */}
             </Box>
           </Box>
         </Flex>
