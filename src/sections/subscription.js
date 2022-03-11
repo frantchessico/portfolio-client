@@ -2,11 +2,55 @@
 import { jsx, Box, Flex, Container, Input, Button } from 'theme-ui';
 import SectionHeading from 'components/section-heading';
 import { rgba } from 'polished';
+import { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
+import { newsletter } from 'service/form.service';
 
 const Subscription = () => {
-  const handleSubmit = (e) => {
+  const [loader, setLoader] = useState(false);
+
+  const handleSubmit = async (e) => {
+    setLoader(true)
     e.preventDefault();
-    console.log(`Submitted...`);
+    
+   
+   const email = e.target.email.value;
+   const data = {
+     email
+   };
+   await e.target.reset();
+
+    
+
+   try {
+    const snap = await  newsletter(data);
+     
+     
+
+     if(snap.data.errors === 'email should be valid') {
+      setLoader(false);
+
+      return   toast.error('Your email should be valid')
+     }
+     if(snap.data.errors) {
+      setLoader(false);
+      
+      return   toast.error('Sorry, sommething went wrong, please try again.')
+     }
+
+     else {
+      setLoader(false);
+      
+     
+      return toast.success(`Welcome to my newsletter. I hope you enjoy.`);
+     }
+
+   } catch (error) {
+    setLoader(false);
+    console.log(error)
+    return   toast.error('Sorry, sommething went wrong, please try again.')
+   }
+  
   };
   return (
     <Box as="section" sx={styles.section}>
@@ -22,7 +66,9 @@ const Subscription = () => {
               Email
             </Box>
             <Input type="email" id="email" placeholder="Enter your email" />
-            <Button variant="white">Subscribe now</Button>
+            <Button variant="white">
+            {loader? "Please Wait...": "Subscribe now"}
+            </Button>
           </Flex>
         </Box>
       </Container>

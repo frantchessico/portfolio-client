@@ -53,7 +53,11 @@ export default function Banner() {
      
      
 
+     if(snap.data.errors === 'email should be valid') {
+      setLoader(false);
 
+      return   toast.error('Your email should be valid')
+     }
      if(snap.data.errors) {
       setLoader(false);
       
@@ -69,6 +73,7 @@ export default function Banner() {
      }
 
    } catch (error) {
+    setLoader(false);
     return   toast.error('Sorry, sommething went wrong, please try again.')
    }
   
