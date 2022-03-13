@@ -36,7 +36,7 @@ const data = [
     id: 4,
     image: gallery4,
     title: 'Pinterest Clone',
-    link: "https://savanapoint.org/"
+    link: "https://franciscoinoque-pin-clone.web.app/"
   },
   {
     id: 6,
